@@ -1,30 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MavPath</title>
-        
-        <style>
-            html,
-            body {
-              background-color: rgb(221, 221, 221);
-              overflow: hidden;
-              margin: 0;
-            }
-            #main {
-                background-color: lightgrey;
-                width: 300px;
-                border: 2px solid rgb(0, 0, 0);
-                padding: 50px;
-                margin: 20px;
-            }
-          </style>
-        
-    </head>
-    <body>
-        <section id="main">
+<html>
+
+  <head>
+    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+   <section id="main">
             
             <!--college selection-->
             <label for="college_choice">Community/ Tribal College</label>
@@ -41,62 +25,11 @@
                 <option value="western">Western Nebraska Community College</option>
             </select>
             <p id="demo">noting</p>
+            <label for="college_choice">Community/ Tribal College Degree</label>
+            <select id="nameSelect">
+            <!-- I want them here -->
+            </select>
 
-          
-            <br><br>
-            <!-- Script for college selection-->
-            <!--will need to do more scripting probably switch statements to idenitfy and limit-->
-            <script>
-                let output = document.getElementById('choice1');
-                function selectOption() {
-                    let dropdown = document.getElementById('choice1');
-                    // get the index of the selected option
-                    let selectedIndex = dropdown.selectedIndex;
-                    // get a selected option and text value using the text property
-                    let selectedValue = dropdown.options[selectedIndex].text;
-                
+  </body>
 
-
-                 switch(selectedValue) {
-                    case "Central Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Iowa Western Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Little Priest Tribal College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Metropolitan Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Nebraska Indian Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Northeast Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Southeast Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Wayne State College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    case "Western Nebraska Community College":
-                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
-                        break;
-                    default:
-                        document.getElementById("demo").innerHTML = "You selected noting";
-                    } 
-                }
-            </script>
-
-    
-
-
-
-
-        </section>
-    </body>
 </html>
-
