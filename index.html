@@ -8,12 +8,14 @@
   </head>
 
   <body>
-   <section id="main">
+   <body>
+        <section id="main">
             
             <!--college selection-->
             <label for="college_choice">Community/ Tribal College</label>
             <br>
             <select name="college" id="choice1" onchange="selectOption()">
+                <option value="none">Select A School</option>
                 <option value="central">Central Community College</option>
                 <option value="iowawest">Iowa Western Community College</option>
                 <option value="littlePriest">Little Priest Tribal College</option>
@@ -25,11 +27,39 @@
                 <option value="western">Western Nebraska Community College</option>
             </select>
             <p id="demo">noting</p>
-            <label for="college_choice">Community/ Tribal College Degree</label>
+            <div>
+                <label for="input-file">Specify a file:</label><br>
+                <input type="file" id="input-file">
+               </div>
+               <textarea id="content-target"></textarea>               
+          
+            <br><br>
+
+            <br><br>
+            <label for="college_choice">Community/ Tribal College Degree</label><br>
+        
             <select id="nameSelect">
+                <option value="none">Select A Degree</option>
             <!-- I want them here -->
             </select>
 
+
+            <br><br>
+            <label for="college_choice">UNO Degree</label><br>
+            <select id="unoSelect">
+                <option value="none">Select A Degree</option>
+            <!-- I want them here -->
+            </select>
+
+
+            
+
+            <br><br><br><br>
+            <label for="search">Search by UNO Degree</label>
+            <form class="example" action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
   </body>
 
 </html>
