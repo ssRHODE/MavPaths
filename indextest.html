@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MavPath</title>
+        
+        <style>
+            html,
+            body {
+              background-color: rgb(221, 221, 221);
+              overflow: hidden;
+              margin: 0;
+            }
+            #main {
+                background-color: lightgrey;
+                width: 600px;
+                border: 2px solid rgb(0, 0, 0);
+                padding: 50px;
+                margin: 20px;
+            }
+          </style>
+        
+    </head>
+    <body>
+        <section id="main">
+            
+            <!--college selection-->
+            <label for="college_choice">Community/ Tribal College</label>
+            <br>
+            <select name="college" id="choice1" onchange="selectOption()">
+                <option value="none">Select A School</option>
+                <option value="central">Central Community College</option>
+                <option value="iowawest">Iowa Western Community College</option>
+                <option value="littlePriest">Little Priest Tribal College</option>
+                <option value="metro">Metropolitan Community College</option>
+                <option value="neIndian">Nebraska Indian Community College</option>
+                <option value="northEast">Northeast Community College</option>
+                <option value="southEast">Southeast Community College</option>
+                <option value="wayne">Wayne State College</option>
+                <option value="western">Western Nebraska Community College</option>
+            </select>
+            <p id="demo">noting</p>
+            <div>
+                <label for="input-file">Specify a file:</label><br>
+                <input type="file" id="input-file">
+               </div>
+               <textarea id="content-target"></textarea>               
+          
+            <br><br>
+
+            <br><br>
+            <label for="college_choice">Community/ Tribal College Degree</label><br>
+        
+            <select id="nameSelect">
+                <option value="none">Select A Degree</option>
+            <!-- I want them here -->
+            </select>
+
+
+            <br><br>
+            <label for="college_choice">UNO Degree</label><br>
+            <select id="unoSelect">
+                <option value="none">Select A Degree</option>
+            <!-- I want them here -->
+            </select>
+
+
+            
+
+            <br><br><br><br>
+            <label for="search">Search by UNO Degree</label>
+            <form class="example" action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- Script for college selection-->
+            <!--will need to do more scripting probably switch statements to idenitfy and limit-->
+            <script>
+                let output = document.getElementById('choice1');
+                function selectOption() {
+                    let dropdown = document.getElementById('choice1');
+                    // get the index of the selected option
+                    let selectedIndex = dropdown.selectedIndex;
+                    // get a selected option and text value using the text property
+                    let selectedValue = dropdown.options[selectedIndex].text;
+                
+
+
+                 switch(selectedValue) {
+                    case "Central Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Iowa Western Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Little Priest Tribal College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Metropolitan Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Nebraska Indian Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Northeast Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Southeast Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Wayne State College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    case "Western Nebraska Community College":
+                        document.getElementById("demo").innerHTML = "You selected " + selectedValue;
+                        break;
+                    default:
+                        document.getElementById("demo").innerHTML = "You selected noting";
+                    } 
+                }
+
+                //here the code breaks
+                $.get(C:\Users\maria\Desktop\capstone\paths.txt, //would be  _.txt based off selection above
+                function read(data,error) {
+                if (error) {
+                      console.log (error);
+                  }
+                alert( "Data Loaded: " );
+                console.log('start processing text')
+                console.log(data); /* Open the console too see the data */
+                var options = JSON.parse(data);
+                /* Something to "explode" by. See link. */
+                for (i in options) {
+                  $("#nameSelect").append('<option value="' + options[i] + '">' + i + '</option>');
+                }
+      });
+
+            </script>
+
+    
+
+
+
+
+        </section>
+    </body>
+</html>
+
