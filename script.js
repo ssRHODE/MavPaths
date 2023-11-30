@@ -11,11 +11,17 @@ let output = document.getElementById('choice1');
 
 
                  switch(selectedValue) {
+					case "Select A School":
+						var select = document.getElementById("nameSelect");
+                        var uno = document.getElementById("unoSelect");
+                        _html1 = "<option value=Select A Degree>" + "Select A Degree" + "</option>";
+						 select.innerHTML = _html1;
+						break;
                     case "Central Community College":
                         
                         const cent = ["Theatre",
                             "Criminology",
-                            "CCC A.S. in (Architectural Engineering focus)",
+                            "Architectural Engineering focus A.S.",
                             "Civil engineering",
                             "Computer engineering",
                             "Construction engineer",
@@ -33,7 +39,7 @@ let output = document.getElementById('choice1');
                         break;
                     case "Iowa Western Community College":
                 
-                        const  IWCC= ["IWCC A.A. Business Administration"];
+                        const  IWCC= ["Business Administration A.A."];
                             var select = document.getElementById("nameSelect"),
                             _html = "";
                             for ( i = 0; i < IWCC.length; i++ ) {
@@ -43,7 +49,7 @@ let output = document.getElementById('choice1');
                         break;
                     case "Little Priest Tribal College":
                     
-                        const  LPTC= ["LPTC A.S. in Biology", "LPTC A.S. Business", "LPTC A.A.L.A. (Sociology focus)"];
+                        const  LPTC= ["Biology A.S.", "Business A.S.", "Sociology focus A.A.L.A."];
                             var select = document.getElementById("nameSelect"),
                             _html = "";
                             for ( i = 0; i < LPTC.length; i++ ) {
@@ -54,7 +60,7 @@ let output = document.getElementById('choice1');
                     case "Metropolitan Community College":
                         break;
                     case "Nebraska Indian Community College":
-                        const  NICC= ["NICC A.A. General Studies", "NICC A.A. General Liberal Arts(Emergency Management, concentration in Criminology and Criminal Justice focus)", "NICC A.A. Native American Studies (Contemporary Tribal Leadership emphasis)","NICC A.A. Native American Studies (History and Traditional Culture emphasis)"];
+                        const  NICC= ["General Studies A.A.", "General Liberal Arts(Emergency Management, concentration in Criminology and Criminal Justice focus) A.A.", "Native American Studies (Contemporary Tribal Leadership emphasis) A.A.","Native American Studies (History and Traditional Culture emphasis) A.A."];
                             var select = document.getElementById("nameSelect"),
                             _html = "";
                             for ( i = 0; i < NICC.length; i++ ) {
@@ -96,7 +102,7 @@ let output = document.getElementById('choice1');
                         break;
                     case "Wayne State College":
     
-                        const  WSC= ["WSC Coursework (Pre-Engineering focus)"];
+                        const  WSC= ["Coursework (Pre-Engineering focus)"];
                             var select = document.getElementById("nameSelect"),
                             _html = "";
                             for ( i = 0; i < WSC.length; i++ ) {
