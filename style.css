@@ -12,3 +12,11 @@ html,
                 padding: 50px;
                 margin: 20px;
             }
+
+            #searchResults {
+              list-style: none;
+            }
+
+            #searchResults li {
+              cursor: pointer; 
+            }
